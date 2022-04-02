@@ -1,0 +1,49 @@
+.heading-1 {
+    font-family: $font-heading;
+    align-self: start;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 6.2rem;
+    color: $color-grey-light-1;
+    word-spacing: 5px;
+    letter-spacing: 2px;
+    margin-left: -0.5rem;
+
+    span {
+        color: $color-primary;
+    }
+}
+
+.heading-3 {
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: $color-primary;
+    font-family: $font-heading;
+    word-spacing: 2px;
+}
+
+.heading-2 {
+    font-size: 4rem;
+    line-height: 1;
+    font-weight: 300;
+    color: $color-grey-dark-1;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.wh {
+    color: $color-grey-light-1;
+}
+
+.gold {
+    color: $color-primary;
+}
+
+.mb-esm { margin-bottom: 1rem; }
+.mb-sm { margin-bottom: 2rem; }
+.mb-md { margin-bottom: 3rem; }
+.mb-lg { margin-bottom: 4rem; }
+.mb-hg { margin-bottom: 8rem; }

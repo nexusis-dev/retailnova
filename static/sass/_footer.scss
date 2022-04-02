@@ -1,0 +1,51 @@
+.footer {
+    padding: 10rem 3.2rem;
+    background-color: $color-secondary;
+    border-top: 1px solid #444;
+
+    &__logo {
+        margin: 0 auto 5rem;
+        height: 7rem;
+        width: auto;
+        display: block;
+    }
+
+    &__copyright {
+        text-align: center;
+        color: #777;
+        font-size: 1.4rem;
+
+        & span {
+            color: $color-primary-dark;
+
+            &.year {
+                color: #777;
+            }
+        }
+    }
+
+    &__address {
+        text-align: center;
+        font-size: 1.4rem;
+        margin-top: 2.4rem;
+    }
+
+    &__contact {
+        text-align: center;
+        font-size: 1.4rem;
+        margin-top: 1rem;
+    }
+
+    &__link {
+        text-decoration: none;
+        
+        &:link, &:visited {
+            color: #777;
+            transition: all 0.3s;
+        }
+        
+        &:hover, &:active {
+            color: #b7bbc0;
+        }
+    }
+}

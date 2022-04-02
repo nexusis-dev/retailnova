@@ -1,0 +1,38 @@
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 500;
+    font-family: $font-heading;
+    text-transform: uppercase;
+    padding: 1.8rem 3rem;
+    word-spacing: 1.5px;
+    letter-spacing: 1.5px;
+
+    &:link,
+    &:visited {
+        background-color: $color-primary;
+        color: #fff;
+        transition: all 0.3s;
+    }
+
+    &:hover,
+    &:active {
+        background-color: $color-primary-dark;
+    }
+
+    &--submit {
+        border: none;
+        cursor: pointer;
+        font-family: $font-heading;
+        display: inline-block;
+        background-color: $color-primary;
+        color: #fff;
+        word-spacing: 1.5px;
+        letter-spacing: 1.5px;
+        outline: none;
+        transition: all 0.3s;
+    }
+
+}
+

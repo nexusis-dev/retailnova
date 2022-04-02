@@ -1,0 +1,51 @@
+.header {
+    height: 100vh;
+    padding: 3.2rem 5.4rem;
+    background-image: linear-gradient(rgba($color-secondary, 0.9), rgba($color-secondary, 0.9)), url('./../img/hero-img.jpg');
+    background-size: cover;
+    background-position: center;
+
+    display: grid;
+    grid-template-rows: 1fr min-content minmax(12rem, min-content) 1fr;
+    grid-template-columns: 1fr;
+    row-gap: 1.5rem;
+
+    &__cta {
+        align-self: start;
+    }
+}
+
+.nav {
+    &__list {
+        display: flex;
+        list-style: none;
+        align-items: center;
+        // margin: 2.4rem 2.4rem 0 2.4rem;
+    }
+
+    &__item {
+        &:first-child {
+            margin-right: auto;
+        }
+
+        &:last-child {
+            margin-left: 2.4rem;
+        }
+    }
+
+    &__link:link,
+    &__link:visited {
+        text-decoration: none;
+        color: $color-primary;
+
+        .icon {
+            height: 3.2rem;
+            width: 3.2rem;
+        }
+    }
+
+    &__logo {
+        height: 6.4rem;
+        width: auto;
+    }
+}

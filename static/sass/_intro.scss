@@ -1,0 +1,27 @@
+.intro {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: $color-grey-light-1;
+
+    &__picture {
+        background-image: linear-gradient(rgba($color-primary, 0.25), rgba($color-primary, 0.25)), url('./../img/about-1.jpg');
+        background-size: cover;
+        background-position: right;        
+    }
+
+    &__content {
+        padding: 12rem 8rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        text-align: right;
+    }
+
+    &__paragraph {
+        font-size: 1.5rem;
+        font-style: italic;
+        margin-bottom: 4rem;
+        text-align: right;
+    }
+}
