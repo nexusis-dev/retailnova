@@ -1,5 +1,5 @@
-// import 'core-js/stable';
-// import 'regenerator-runtime/runtime';
+import 'core-js/stable';
+import 'regenerator-runtime/runtime';
 
 
 // UPDATE THE YEAR IN THE FOOTER
@@ -121,7 +121,7 @@ async function sendData(name, email, phone, message) {
         showOverlay();
         renderSpinner();
 
-        const reqPromise = fetch('http://127.0.0.1:5000/api/v1/email/75909844-a941-4023-837c-fd143daa1fd0', {
+        const reqPromise = fetch('https://www.retailnova.cz/api/v1/email/75909844-a941-4023-837c-fd143daa1fd0', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

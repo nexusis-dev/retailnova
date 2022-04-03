@@ -4,6 +4,10 @@
     background-image: linear-gradient(rgba($color-secondary, 0.95), rgba($color-secondary, 0.95)), url('./../img/hero-img.jpg');
     background-size: cover;
     background-position: center;
+
+    @media only screen and (max-width: $bp-medium) {
+        padding: 12rem 0;
+    }
 }
 
 .card-container {
@@ -13,6 +17,24 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     column-gap: 6rem;
+
+    @media only screen and (max-width: $bp-large) {
+        column-gap: 3rem;
+    }
+    
+    @media only screen and (max-width: $bp-medium) {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 6rem;
+        row-gap: 6rem;
+        justify-items: center;
+    }
+    
+    @media only screen and (max-width: $bp-small) {
+        grid-template-columns: 1fr;
+        column-gap: 6rem;
+        row-gap: 6rem;
+        justify-items: center;
+    }
 }
 
 .card {
@@ -29,6 +51,14 @@
     border-radius: 3px;
 
     transition: all 0.4s;
+
+    @media only screen and (max-width: 62.5em) {
+        padding: 2rem;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+        width: 25rem;
+    }
 
     @media (any-hover: hover) {
         &:hover {

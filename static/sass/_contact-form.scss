@@ -15,6 +15,24 @@
             grid-template-columns: 2fr 1fr ;
             border-radius: 2px;
             column-gap: 5.4rem;
+
+            @media only screen and (max-width: 62.5em) {
+                grid-template-columns: 2.5fr 1fr;
+            }
+
+            @media only screen and (max-width: $bp-medium) {
+                grid-template-columns: 1fr;
+            }
+        }
+    }
+
+    &__text-box {
+        & .break {
+            display: none;
+
+            @media only screen and (max-width: 31.25em) {
+                display: block;
+            }
         }
     }
 
@@ -22,6 +40,10 @@
         background-image: linear-gradient(rgba($color-secondary, 0.3), rgba($color-secondary, 0.3)), url('./../img/contact.jpg');
         background-position: right;
         background-size: cover;
+
+        @media only screen and (max-width: $bp-medium) {
+            display: none;
+        }
     }
 
     &__form {
@@ -31,6 +53,11 @@
         column-gap: 5.4rem;
         row-gap: 1.8rem;
 
+        @media only screen and (max-width: $bp-small) {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(5, min-content);
+        }
+
         & div {
             display: flex;
             flex-direction: column;
@@ -38,6 +65,13 @@
             &.msg {
                 grid-row: 1 / 5;
                 grid-column: 2 / 3;
+
+                @media only screen and (max-width: $bp-small) {
+                    grid-row: 4 / 5;
+                    grid-column: 1;
+                    height: 25rem;
+
+                }
             }
 
             & label {

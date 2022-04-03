@@ -9,10 +9,19 @@
 html {
     box-sizing: border-box;
     font-size: 62.5%;
-
-    // @media only screen and (max-width: $bp-largest) {
-    //     font-size: 50%;
-    // }
+    overflow-x: hidden;
+    
+    @media only screen and (min-width: $bp-big-screen) {
+        font-size: 75%;
+    }
+    
+    @media only screen and (max-width: $bp-large) {
+        font-size: 56.25%;
+    }
+    
+    @media only screen and (max-width: $bp-medium) {
+        font-size: 50%;
+    }
 }
 
 body {
@@ -20,6 +29,8 @@ body {
     color: $color-grey-dark-3;
     font-weight: 500;
     line-height: 1.6;
+    overflow-x: hidden;
+    // background-color: rgb(23, 40, 60);
 }
 
 ::selection {

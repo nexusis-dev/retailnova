@@ -3,10 +3,18 @@
     grid-template-columns: repeat(2, 1fr);
     background-color: $color-grey-light-1;
 
+    @media only screen and (max-width: 53.125em) {
+        grid-template-columns: 1fr;
+    }
+
     &__picture {
         background-image: linear-gradient(rgba($color-primary, 0.25), rgba($color-primary, 0.25)), url('./../img/about-1.jpg');
         background-size: cover;
-        background-position: right;        
+        background-position: right;
+        
+        @media only screen and (max-width: 53.125em) {
+            height: 66vh;
+        }
     }
 
     &__content {
@@ -16,6 +24,15 @@
         justify-content: center;
         align-items: flex-end;
         text-align: right;
+        
+        @media only screen and (max-width: 53.125em) {
+            text-align: left;
+            align-items: flex-start;
+        }
+        
+        @media only screen and (max-width: $bp-small) {
+            padding: 9rem 3.2rem;
+        }
     }
 
     &__paragraph {
@@ -23,5 +40,9 @@
         font-style: italic;
         margin-bottom: 4rem;
         text-align: right;
+
+        @media only screen and (max-width: 53.125em) {
+            text-align: left;
+        }
     }
 }
