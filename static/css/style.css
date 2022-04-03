@@ -330,8 +330,6 @@ body {
     background-image: linear-gradient(rgba(16, 29, 44, 0.3), rgba(16, 29, 44, 0.3)), url("./../img/contact.jpg");
     background-position: right;
     background-size: cover; }
-  .contact__text {
-    font-size: 1.5rem; }
   .contact__form {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
