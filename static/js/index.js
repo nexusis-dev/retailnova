@@ -1,5 +1,5 @@
-import 'core-js/stable';
-import 'regenerator-runtime/runtime';
+// import 'core-js/stable';
+// import 'regenerator-runtime/runtime';
 
 
 // UPDATE THE YEAR IN THE FOOTER
@@ -7,10 +7,23 @@ const yearEl = document.querySelector('.year');
 const currentYear = new Date().getFullYear();
 yearEl.textContent = currentYear;
 
-// SMOOTH SCROLLING ANIMATION
-const ctaBtns = document.querySelectorAll('.btn--cta');
+// MOBILE NAV
+const mobNav = document.querySelector('.nav__list--links');
+const openBtn = document.querySelector('.nav__btn--mob');
+const closeBtn = document.querySelector('.nav__btn--mob-close');
 
-ctaBtns.forEach(function(link) {
+openBtn.addEventListener('click', function() {
+    mobNav.classList.add('nav-open');
+});
+
+closeBtn.addEventListener('click', function() {
+    mobNav.classList.remove('nav-open');
+});
+
+// SMOOTH SCROLLING ANIMATION
+const allLinks = document.querySelectorAll('.scroll-to');
+
+allLinks.forEach(function(link) {
     link.addEventListener('click', function(e) {
         e.preventDefault();
         const href = link.getAttribute('href');
@@ -26,8 +39,10 @@ ctaBtns.forEach(function(link) {
         //  Scroll to other links
         if (href !== '#' && href.startsWith('#')) {
             const sectionEl = document.querySelector(href);
-            sectionEl.scrollIntoView({behavior: 'smooth'});
+            sectionEl.scrollIntoView({ behavior: 'smooth' });
         }
+
+        mobNav.classList.remove('nav-open');
     });
 });
 
@@ -162,4 +177,34 @@ form.addEventListener('submit', function (e) {
 
     sendData(fullName, email, phone, message);
     // console.log(fullName, email, phone, message);
+});
+
+// FADE IN ANIMATIONS
+const allSections = document.querySelectorAll('section');
+
+function revealSection(entries, observer) {
+    entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+            
+            entry.target.classList.remove('section--hidden');
+
+            observer.unobserve(entry.target);
+        }        
+    });
+}
+
+const optiSec = {
+    root: null,
+    threshold: 0.15,
+    rootMargin: '0px 0px 0px 0px'
+};
+
+const sectionObserver = new IntersectionObserver(revealSection, optiSec);
+
+allSections.forEach(function(section) {
+    // Attach an observer to each section
+    sectionObserver.observe(section);
+    
+    // Hide all sections
+    section.classList.add('section--hidden');
 });

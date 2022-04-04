@@ -28,16 +28,70 @@
         display: flex;
         list-style: none;
         align-items: center;
-        // margin: 2.4rem 2.4rem 0 2.4rem;
+    }
+    
+    &__list--links {
+        display: flex;
+        list-style: none;
+        align-items: center;
+
+        @media only screen and (max-width: 52.25em) {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            width: 100vw;
+            background-color: rgba($color-secondary, 0.9);
+            -webkit-backdrop-filter: blur(6px);
+            backdrop-filter: blur(6px);
+            z-index: 1000;
+            flex-direction: column;
+            justify-content: center;
+
+            transform: translateY(-100%);
+            transition: all 0.3s;
+
+            &.nav-open {
+                transform: translateY(0);
+            }
+        }
     }
 
     &__item {
-        &:first-child {
+        &--logo {
             margin-right: auto;
         }
 
-        &:last-child {
+        &--icon {
+            display: flex;
+            align-items: center;
+            margin-left: 3.8rem;
+
+            @media only screen and (max-width: 52.25em) {
+                margin-left: 0;
+                margin-bottom: 1rem;
+
+                &:not(:last-child) {
+                    margin-top: 3rem;
+                }
+            }
+
+            &:last-child {
+                margin-left: 2.4rem;
+
+                @media only screen and (max-width: 52.25em) {
+                    margin-left: 0;
+                }
+            }
+        }
+
+        &--link {
             margin-left: 2.4rem;
+
+            @media only screen and (max-width: 52.25em) {
+                margin-bottom: 1.8rem;
+                margin-left: 0;
+            }
         }
     }
 
@@ -45,11 +99,35 @@
     &__link:visited {
         text-decoration: none;
         color: $color-primary;
+        font-size: 1.7rem;
+        line-height: 1.2;
+        text-transform: uppercase;
+
+        @media only screen and (max-width: 52.25em) {
+            font-size: 2.8rem;
+        }
+
+        transition: all 0.3s;
 
         .icon {
             height: 3.2rem;
             width: 3.2rem;
+
+            @media only screen and (max-width: $bp-medium) {
+                height: 2.8rem;
+                width: 2.8rem;
+            }
+
+            @media only screen and (max-width: 52.25em) {
+                height: 4.2rem;
+                width: 4.2rem;
+            }
         }
+    }
+
+    &__link:hover,
+    &__link:active {
+        color: $color-primary-dark;
     }
 
     &__logo {
@@ -58,6 +136,64 @@
 
         @media only screen and (max-width: $bp-small) {
             height: 4.8rem;
+        }
+    }
+
+    &__mob-logo {
+        display: none;
+        width: 5rem;
+        height: auto;
+
+        @media only screen and (max-width: 52.25em) {
+            display: block;
+            position: absolute;
+            top: 3.2rem;
+            left: 3.2rem;
+        }
+    }
+
+    &__btn--mob {
+        display: none;
+
+        @media only screen and (max-width: 52.25em) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: transparent;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            color: $color-primary;
+            animation: 800ms cubic-bezier(0.7, 0, 0.3, 1) 0s infinite alternate none running bounce;
+        }
+
+        & svg {
+            height: 3.8rem;
+            width: 3.8rem;
+        }
+    }
+
+    &__btn--mob-close {
+        display: none;
+
+        @media only screen and (max-width: 52.25em) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: transparent;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            color: $color-primary;
+
+            position: absolute;
+            top: 3.2rem;
+            right: 3.2rem;
+        }
+
+        & svg {
+            height: 3.8rem;
+            width: 3.8rem;
         }
     }
 }

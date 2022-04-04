@@ -192,16 +192,3 @@
         }
     }
 }
-
-
-@keyframes bounce {
-    0% {
-        // transform: translateY(-5px);
-        transform: translate3d(0, -5px, 0);
-    }
-    
-    100% {
-        // transform: translateY(1px);
-        transform: translate3d(0, 1px, 0);
-    }
-}
