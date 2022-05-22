@@ -18,7 +18,7 @@
     }
 
     &__content {
-        padding: 12rem 8rem;
+        padding: 9.6rem 8rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -39,10 +39,11 @@
         font-size: 1.5rem;
         font-style: italic;
         margin-bottom: 4rem;
-        text-align: right;
+        text-align: justify;
+        text-align-last: right;
 
         @media only screen and (max-width: 53.125em) {
-            text-align: left;
+            text-align-last: left;
         }
     }
 }

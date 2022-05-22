@@ -21,7 +21,7 @@ html {
 
 body {
   font-family: "Nunito", sans-serif;
-  color: #777;
+  color: #444;
   font-weight: 500;
   line-height: 1.6;
   overflow-x: hidden;
@@ -84,19 +84,19 @@ section {
   color: #c69963; }
 
 .mb-esm {
-  margin-bottom: 1rem; }
+  margin-bottom: 1rem !important; }
 
 .mb-sm {
-  margin-bottom: 2rem; }
+  margin-bottom: 2rem !important; }
 
 .mb-md {
-  margin-bottom: 3rem; }
+  margin-bottom: 3rem !important; }
 
 .mb-lg {
-  margin-bottom: 4rem; }
+  margin-bottom: 4rem !important; }
 
 .mb-hg {
-  margin-bottom: 8rem; }
+  margin-bottom: 8rem !important; }
 
 .btn {
   display: inline-block;
@@ -321,7 +321,7 @@ section {
       .intro__picture {
         height: 66vh; } }
   .intro__content {
-    padding: 12rem 8rem;
+    padding: 9.6rem 8rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -338,10 +338,11 @@ section {
     font-size: 1.5rem;
     font-style: italic;
     margin-bottom: 4rem;
-    text-align: right; }
+    text-align: justify;
+    text-align-last: right; }
     @media only screen and (max-width: 53.125em) {
       .intro__paragraph {
-        text-align: left; } }
+        text-align-last: left; } }
 
 .services {
   padding: 20rem 0;
@@ -459,11 +460,11 @@ section {
   .features__container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    column-gap: 4rem; }
+    column-gap: 3.2rem; }
     @media only screen and (max-width: 75em) {
       .features__container {
-        column-gap: 3.2rem; } }
-    @media only screen and (max-width: 62.5em) {
+        column-gap: 2.4rem; } }
+    @media only screen and (max-width: 63.75em) {
       .features__container {
         grid-template-columns: repeat(2, 1fr);
         row-gap: 3.2rem; } }
@@ -478,8 +479,8 @@ section {
   position: relative; }
   @media only screen and (max-width: 75em) {
     .feature {
-      height: 50rem; } }
-  @media only screen and (max-width: 62.5em) {
+      height: 52rem; } }
+  @media only screen and (max-width: 63.75em) {
     .feature:last-child {
       grid-column: span 2;
       justify-self: center; } }
@@ -503,7 +504,7 @@ section {
     transition: all 0.5s; }
     @media only screen and (max-width: 75em) {
       .feature__img {
-        height: 25rem; } }
+        height: 26rem; } }
     .feature__img-1 {
       background-image: url("../img/feature-1.jpg"); }
     .feature__img-2 {

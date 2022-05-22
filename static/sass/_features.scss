@@ -11,13 +11,13 @@
     &__container {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        column-gap: 4rem;
+        column-gap: 3.2rem;
 
         @media only screen and (max-width: $bp-large) {
-            column-gap: 3.2rem;
+            column-gap: 2.4rem;
         }
 
-        @media only screen and (max-width: 62.5em) {
+        @media only screen and (max-width: 63.75em) {
             grid-template-columns: repeat(2, 1fr);
             row-gap: 3.2rem;
         }
@@ -35,10 +35,10 @@
     position: relative;
 
     @media only screen and (max-width: $bp-large) {
-        height: 50rem;
+        height: 52rem;
     }
 
-    @media only screen and (max-width: 62.5em) {
+    @media only screen and (max-width: 63.75em) {
         &:last-child {
             grid-column: span 2;
             justify-self: center;
@@ -69,7 +69,7 @@
         transition: all 0.5s;
 
         @media only screen and (max-width: $bp-large) {
-            height: 25rem;
+            height: 26rem;
         }
 
         &-1 {
