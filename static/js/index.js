@@ -1,5 +1,5 @@
-import 'core-js/stable';
-import 'regenerator-runtime/runtime';
+// import 'core-js/stable';
+// import 'regenerator-runtime/runtime';
 
 
 // UPDATE THE YEAR IN THE FOOTER
@@ -39,6 +39,11 @@ allLinks.forEach(function(link) {
         //  Scroll to other links
         if (href !== '#' && href.startsWith('#')) {
             const sectionEl = document.querySelector(href);
+
+            if (sectionEl === null) {
+                return;
+            }
+
             sectionEl.scrollIntoView({ behavior: 'smooth' });
         }
 
@@ -208,3 +213,28 @@ allSections.forEach(function(section) {
     // Hide all sections
     section.classList.add('section--hidden');
 });
+
+// STICKY NAVIGATION
+
+const heroSection = document.querySelector('.header');
+const navigationCommon = document.querySelector('.nav');
+const stickyClass = 'sticky-header';
+
+const headerOptions = {
+    root: null,
+    threshold: 0,
+    rootMargin: '-80px 0px 0px 0px'
+};
+
+function handleStickyHeader(entries, observer) {
+    const entry = entries[0];
+
+    if (!entry.isIntersecting) {
+        navigationCommon.classList.add(stickyClass);
+    } else {
+        navigationCommon.classList.remove(stickyClass);
+    }
+}
+
+const headerObserver = new IntersectionObserver(handleStickyHeader, headerOptions);
+headerObserver.observe(heroSection);

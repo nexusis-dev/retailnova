@@ -1,19 +1,35 @@
-.about {
+.services-tenants {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     background-color: $color-grey-light-1;
+    // border-bottom: 1px solid rgba($color-secondary, 0.95);
 
     @media only screen and (max-width: 53.125em) {
         grid-template-columns: 1fr;
     }
 
-    &__picture {
-        background-image: linear-gradient(rgba($color-primary, 0.25), rgba($color-primary, 0.25)), url('./../img/about-4.jpg');
+    &--right {
+        background-image: linear-gradient(rgba($color-secondary, 0.95), rgba($color-secondary, 0.95)), url('./../img/hero-img.jpg');
         background-size: cover;
-        background-position: right;
+        background-position: center;
+
+        padding: 12rem 5.4rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        column-gap: 2.8rem;
 
         @media only screen and (max-width: 53.125em) {
-            height: 66vh;
+            grid-row: 2/3;
+            padding: 9.6rem 8rem;
+            column-gap: 6.4rem;
+            row-gap: 5.2rem;
+        }
+
+        @media only screen and (max-width: $bp-small) {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(2, min-content);
+            justify-items: center;
         }
     }
 
@@ -23,6 +39,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
+        text-align: left;
 
         @media only screen and (max-width: 53.125em) {
             text-align: left;
@@ -35,8 +52,10 @@
     }
 
     &__paragraph {
-        font-size: 1.5rem;
+        font-size: 1.6rem;
         font-style: italic;
+        text-align: justify;
+        text-align-last: left;
         margin-bottom: 4rem;
 
         @media only screen and (max-width: 53.125em) {

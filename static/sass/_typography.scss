@@ -40,12 +40,22 @@
     color: $color-grey-dark-1;
 }
 
+.heading-break {
+    @media only screen and (max-width: 79.0652em) {
+        display: none;
+    }
+}
+
 .italic {
     font-style: italic;
 }
 
 .wh {
     color: $color-grey-light-1;
+}
+
+.text-center {
+    text-align: center;
 }
 
 .gold {

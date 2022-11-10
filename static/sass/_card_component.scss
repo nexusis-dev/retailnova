@@ -1,0 +1,63 @@
+.card {
+    // background-color: rgba($color-grey-light-1,0.75);
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+
+    padding: 0 1.4rem;
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    grid-template-rows: min-content 1fr;
+    row-gap: 3.2rem;
+    column-gap: 2.4rem;
+    border-radius: 3px;
+
+    transition: all 0.4s;
+
+    @media only screen and (max-width: 62.5em) {
+        padding: 0rem;
+    }
+
+    // @media only screen and (max-width: $bp-medium) {
+    //     width: 25rem;
+    // }
+
+    @media only screen and (max-width: $bp-small) {
+        width: 25rem;
+    }
+
+    @media (any-hover: hover) {
+        &:hover {
+            transform: scale(1.02) translateY(-1.5rem);
+        }
+    }
+
+    &__icon {
+        // width: 7.5rem;
+        // height: 7.5rem;
+        width: 4.5rem;
+        height: 4.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        fill: $color-primary-dark;
+        color: $color-primary-dark;
+        align-self: center;
+    }
+
+    &__heading {
+        font-size: 1.6rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        color: $color-primary-dark;
+        align-self: center;
+    }
+
+    &__paragraph {
+        font-size: 1.5rem;
+        // text-align: center;
+        text-align: justify;
+        grid-column: 1 / -1;
+        color: #b7bbc0;
+    }
+}

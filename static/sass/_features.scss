@@ -1,11 +1,14 @@
 .features {
-    max-width: 120rem;
-    margin: 0 auto;
-    padding: 11rem 3.2rem;
-    background-color: #fff;
+    background-color: #f9f5ef;
 
-    @media only screen and (min-width: $bp-big-screen) {
-        max-width: 130rem;
+    &-wrapper {
+        max-width: 120rem;
+        margin: 0 auto;
+        padding: 11rem 3.2rem;
+
+        @media only screen and (min-width: $bp-big-screen) {
+            max-width: 130rem;
+        }
     }
     
     &__container {

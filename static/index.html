@@ -33,8 +33,8 @@
     <meta name="msapplication-TileColor" content="#c69963">
     <meta name="theme-color" content="#ffffff">
 
-    <script defer type="module" src="js/index.js"></script>
-    <!-- <script defer src="js/index.js"></script> -->
+    <!-- <script defer type="module" src="js/index.js"></script> -->
+    <script defer src="js/index.js"></script>
 
     <title>Retail NOVA &ndash; Retailové poradenství a služby</title>
 </head>
@@ -43,7 +43,9 @@
         <nav class="nav">
             <ul class="nav__list">
                 <li class="nav__item nav__item--logo">
-                    <img src="img/logo.png" alt="Retail NOVA logo" class="nav__logo">
+                    <a href="#" class="nav__item--logo-link scroll-to">
+                        <img src="img/logo.png" alt="Retail NOVA logo" class="nav__logo">
+                    </a>
                 </li>
                 <li class="nav__item">
                     <ul class="nav__list--links">
@@ -54,14 +56,22 @@
                         <li class="nav__item--link">
                             <a class="nav__link scroll-to" href="#intro">O nás</a>
                         </li>
-                        <li class="nav__item--link">
-                            <a class="nav__link scroll-to" href="#services">Služby</a>
+                        <li class="nav__item--link nav__item--link-grouped">
+                            <a class="nav__link" href="#none">Naše služby</a>
+                            <ul class="nav__link--grouper">
+                                <li class="nav__link-group">
+                                    <a class="nav__link scroll-to" href="#services-developers">Pro pronajímatele</a>
+                                </li>
+                                <li class="nav__link-group">
+                                    <a class="nav__link scroll-to" href="#services-tenants">Pro nájemce</a>
+                                </li>
+                            </ul>
                         </li>
-                        <li class="nav__item--link">
-                            <a class="nav__link scroll-to" href="#about">Naše motto</a>
+                        <li class="nav__item--link nav__item-only-mob">
+                            <a class="nav__link scroll-to" href="#services-developers">Pro pronajímatele</a>
                         </li>
-                        <li class="nav__item--link">
-                            <a class="nav__link scroll-to" href="#features">Vše o nájmu</a>
+                        <li class="nav__item--link nav__item-only-mob">
+                            <a class="nav__link scroll-to" href="#services-tenants">Pro nájemce</a>
                         </li>
                         <li class="nav__item--icon">
                             <a href="tel:+420777869564" class="nav__link">
@@ -83,192 +93,227 @@
             </ul>
         </nav>
         <h3 class="heading-3">Váš retail partner</h3>
-        <h1 class="heading-1">Pouze kvalitní <span>retail</span></h1>
+        <h1 class="heading-1">Pomáháme měnit dobrá místa<br class="heading-break"> na skvělé lokality</h1>
         <div class="header__cta">
-            <a href="#cta" class="btn btn--cta scroll-to">Zanechat zprávu</a>
+            <a href="#cta" class="btn btn--cta scroll-to">Poslat zprávu</a>
         </div>
     </header>
+
     <main>
         <section class="intro" id="intro">
             <div class="intro__content">
-                <h3 class="heading-3 mb-sm">Ve zkratce o nás</h3>
-                <h2 class="heading-2 mb-md">Kompletní služby pro naše retailové klienty</h2>
-                <p class="intro__paragraph mb-sm">Od roku 2016 poskytujeme služby na realitním trhu v České republice. 
-                    Nejdříve v realitno-rezidenčním segmentu, později pouze v retailu. Přinášíme komplexní služby 
-                    jako je pronájem obchodních center, pronájem nákupních
-                    galerii a maloobchodních prostor v developerských projektech, smluvní a právní poradenství,
-                    poradenství v oblasti skladby nájemců, prodloužení/stěhování a rozšíření, vypočet příjmů a
-                    maloobchodní poradenství po celé České republice.</p>
-                <p class="intro__paragraph">Naším cílem je přinášet hodnotu do světa maloobchodu, a to skrze důvěry klientů a obchodních
-                    partnerů, reálných cílů, kvality, pečlivosti a inovace.</p>
-                <a href="#cta" class="btn btn--cta scroll-to">Domluvit schůzku</a>
+                <h3 class="heading-3 mb-sm">O nás</h3>
+                <h2 class="heading-2 mb-md">Ve světě nemovitostí již od roku 2016</h2>
+                <p class="intro__paragraph mb-sm">Naším cílem je přinášet hodnotu do světa maloobchodu a být 
+                    dlouhodobým strategickým partnerem svým klientům. Zakládáme si na pečlivosti, udržení vysoké kvality, 
+                    budování důvěry a především plnění nastavených cílů.</p>
+                <p class="intro__paragraph mb-sm">Služby na realitním trhu v České republice poskytujeme 
+                    od roku 2016. Nejdříve v realitně - rezidenčním segmentu, později pouze v retailu. 
+                    Pro své klienty řešíme komplexní služby v oblasti pronájmu obchodních center, 
+                    nákupních galerií i maloobchodních prostor v developerských projektech, 
+                    včetně smluvního a právního poradenství, poradenství pří skladbě nájmů, 
+                    výpočty příjmů i stěhování. </p>
+                <p class="intro__paragraph">U každého klienta je pro nás důležitá spokojenost, 
+                    proto na jedné straně hledáme ideální nájemce a na druhé skvělé místa pro rozvoj 
+                    podnikání a expanze.</p>
+                <!-- <a href="#cta" class="btn btn--cta scroll-to">Domluvit schůzku</a> -->
             </div>
             <div class="intro__picture" role="img" aria-label="Moderní a prostorné nákupní centrum"></div>
         </section>
 
-        <section class="services" id="services">
-            <div class="card-container">
-                <div class="card">
-                    <svg class="card__icon" version="1.1" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
-                        <path d="M18.5 5h-4.5v-1.5c0-0.827-0.673-1.5-1.5-1.5h-5c-0.827 0-1.5 0.673-1.5 1.5v1.5h-4.5c-0.827 0-1.5 0.673-1.5 1.5v11c0 0.827 0.673 1.5 1.5 1.5h17c0.827 0 1.5-0.673 1.5-1.5v-11c0-0.827-0.673-1.5-1.5-1.5zM7 3.5c0-0.276 0.224-0.5 0.5-0.5h5c0.276 0 0.5 0.224 0.5 0.5v1.5h-6v-1.5zM1.5 6h17c0.276 0 0.5 0.224 0.5 0.5v7.5h-2v-0.5c0-0.276-0.224-0.5-0.5-0.5h-2c-0.276 0-0.5 0.224-0.5 0.5v0.5h-8v-0.5c0-0.276-0.224-0.5-0.5-0.5h-2c-0.276 0-0.5 0.224-0.5 0.5v0.5h-2v-7.5c0-0.276 0.224-0.5 0.5-0.5zM16 14v1h-1v-1h1zM5 14v1h-1v-1h1zM18.5 18h-17c-0.276 0-0.5-0.224-0.5-0.5v-2.5h2v0.5c0 0.276 0.224 0.5 0.5 0.5h2c0.276 0 0.5-0.224 0.5-0.5v-0.5h8v0.5c0 0.276 0.224 0.5 0.5 0.5h2c0.276 0 0.5-0.224 0.5-0.5v-0.5h2v2.5c0 0.276-0.224 0.5-0.5 0.5z"></path>
-                    </svg>
-                    <h3 class="card__heading">Smluvní poradenství</h3>
-                    <p class="card__paragraph">
-                        Vypracujeme, upravíme a pomůžeme vyjednat jakoukoliv nájemní smlouvu až k podpisu.
-                    </p>
-                </div>
+        <section class="services-developers" id="services-developers">
+            <div class="services-developers--left">
                 <div class="card">
                     <svg class="card__icon" version="1.1" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
                         <path d="M10 20c-0.153 0-0.298-0.070-0.393-0.191-0.057-0.073-1.418-1.814-2.797-4.385-0.812-1.513-1.46-2.999-1.925-4.416-0.587-1.787-0.884-3.472-0.884-5.008 0-3.308 2.692-6 6-6s6 2.692 6 6c0 1.536-0.298 3.22-0.884 5.008-0.465 1.417-1.113 2.903-1.925 4.416-1.38 2.571-2.74 4.312-2.797 4.385-0.095 0.121-0.24 0.191-0.393 0.191zM10 1c-2.757 0-5 2.243-5 5 0 3.254 1.463 6.664 2.691 8.951 0.902 1.681 1.809 3.014 2.309 3.71 0.502-0.699 1.415-2.040 2.318-3.726 1.223-2.283 2.682-5.687 2.682-8.935 0-2.757-2.243-5-5-5z"></path>
                         <path d="M10 9c-1.654 0-3-1.346-3-3s1.346-3 3-3 3 1.346 3 3-1.346 3-3 3zM10 4c-1.103 0-2 0.897-2 2s0.897 2 2 2c1.103 0 2-0.897 2-2s-0.897-2-2-2z"></path>
                     </svg>
-                    <h3 class="card__heading">Nejlepší lokality</h3>
+                    <h3 class="card__heading">Pronájem obchodních prostor</h3>
                     <p class="card__paragraph">
-                        Pomáháme měnit dobrá místa na skvělé lokality, a to, jak lidi pracují, nakupují a žijí.
+                        Pomáháme měnit dobrá místa na skvělé lokality, kde se lidem dobře pracuje, nakupuje i žije.
                     </p>
                 </div>
+
+                <div class="card">
+                    <svg class="card__icon" version="1.1" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                        <path d="M18.5 5h-4.5v-1.5c0-0.827-0.673-1.5-1.5-1.5h-5c-0.827 0-1.5 0.673-1.5 1.5v1.5h-4.5c-0.827 0-1.5 0.673-1.5 1.5v11c0 0.827 0.673 1.5 1.5 1.5h17c0.827 0 1.5-0.673 1.5-1.5v-11c0-0.827-0.673-1.5-1.5-1.5zM7 3.5c0-0.276 0.224-0.5 0.5-0.5h5c0.276 0 0.5 0.224 0.5 0.5v1.5h-6v-1.5zM1.5 6h17c0.276 0 0.5 0.224 0.5 0.5v7.5h-2v-0.5c0-0.276-0.224-0.5-0.5-0.5h-2c-0.276 0-0.5 0.224-0.5 0.5v0.5h-8v-0.5c0-0.276-0.224-0.5-0.5-0.5h-2c-0.276 0-0.5 0.224-0.5 0.5v0.5h-2v-7.5c0-0.276 0.224-0.5 0.5-0.5zM16 14v1h-1v-1h1zM5 14v1h-1v-1h1zM18.5 18h-17c-0.276 0-0.5-0.224-0.5-0.5v-2.5h2v0.5c0 0.276 0.224 0.5 0.5 0.5h2c0.276 0 0.5-0.224 0.5-0.5v-0.5h8v0.5c0 0.276 0.224 0.5 0.5 0.5h2c0.276 0 0.5-0.224 0.5-0.5v-0.5h2v2.5c0 0.276-0.224 0.5-0.5 0.5z"></path>
+                    </svg>
+                    <h3 class="card__heading">Smluvní a právní poradenství</h3>
+                    <p class="card__paragraph">
+                        Vytváříme i dozorujeme nájemní smlouvy, a pomáháme je vyjednat od návrhu až k podpisu. 
+                    </p>
+                </div>
+
                 <div class="card">
                     <svg class="card__icon" version="1.1" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
                         <path d="M8.5 20c-2.27 0-4.405-0.884-6.010-2.49s-2.49-3.74-2.49-6.010c0-2.27 0.884-4.405 2.49-6.010s3.74-2.49 6.010-2.49c0.276 0 0.5 0.224 0.5 0.5v7.5h7.5c0.276 0 0.5 0.224 0.5 0.5 0 2.27-0.884 4.405-2.49 6.010s-3.74 2.49-6.010 2.49zM8 4.016c-3.903 0.258-7 3.516-7 7.484 0 4.136 3.364 7.5 7.5 7.5 3.967 0 7.225-3.097 7.484-7h-7.484c-0.276 0-0.5-0.224-0.5-0.5v-7.484z"></path>
                         <path d="M18.5 10h-8c-0.276 0-0.5-0.224-0.5-0.5v-8c0-0.276 0.224-0.5 0.5-0.5 2.27 0 4.405 0.884 6.010 2.49s2.49 3.74 2.49 6.010c0 0.276-0.224 0.5-0.5 0.5zM11 9h6.984c-0.247-3.738-3.246-6.736-6.984-6.984v6.984z"></path>
                     </svg>
-                    <h3 class="card__heading">Pestrost nájemců</h3>
+                    <h3 class="card__heading">Poradenství v oblasti skladby nájmů</h3>
                     <p class="card__paragraph">
-                        Poradíme Vám při výběru správného nájemce který zcela zapadne do Vašeho Tenant Mixu.
+                        Pomáháme vám při výběru správného nájemce, který zcela zapadne do vašeho Tenant Mixu. 
                     </p>
                 </div>
+
                 <div class="card">
                     <svg class="card__icon" version="1.1" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
                         <path d="M19.854 8.646c-0.195-0.195-0.512-0.195-0.707 0l-1.149 1.149c-0.051-2.060-0.878-3.99-2.341-5.452-1.511-1.511-3.52-2.343-5.657-2.343-2.974 0-5.686 1.635-7.077 4.266-0.129 0.244-0.036 0.547 0.208 0.676s0.547 0.036 0.676-0.208c1.217-2.303 3.59-3.734 6.193-3.734 3.789 0 6.885 3.027 6.997 6.789l-1.143-1.143c-0.195-0.195-0.512-0.195-0.707 0s-0.195 0.512 0 0.707l2 2c0.098 0.098 0.226 0.146 0.354 0.146s0.256-0.049 0.354-0.146l2-2c0.195-0.195 0.195-0.512 0-0.707z"></path>
                         <path d="M16.869 13.058c-0.244-0.129-0.547-0.036-0.676 0.208-1.217 2.303-3.59 3.734-6.193 3.734-3.789 0-6.885-3.027-6.997-6.789l1.143 1.143c0.098 0.098 0.226 0.146 0.354 0.146s0.256-0.049 0.354-0.146c0.195-0.195 0.195-0.512 0-0.707l-2-2c-0.195-0.195-0.512-0.195-0.707 0l-2 2c-0.195 0.195-0.195 0.512 0 0.707s0.512 0.195 0.707 0l1.149-1.149c0.051 2.060 0.878 3.99 2.341 5.452 1.511 1.511 3.52 2.343 5.657 2.343 2.974 0 5.686-1.635 7.077-4.266 0.129-0.244 0.036-0.547-0.208-0.676z"></path>
                     </svg>
-                    <h3 class="card__heading">Tenant management</h3>
+                    <h3 class="card__heading">Komplexní Tenant Management</h3>
                     <p class="card__paragraph">
-                        Sledujeme expirace Vašich smluv, pomůžeme prodloužit, relokovat nebo najít nového obchpdního partnera.
+                        Poskytujeme kompletní poradenství, hledáme pro vás nové obchodní partnery, sledujeme jejich úspěšnost a navrhujeme kroky pro získání vyšších příjmů.
+                    </p>
+                </div>
+            </div>
+
+            <div class="services-developers__content">
+                <h3 class="heading-3 mb-sm">Služby pro pronajímatele</h3>
+                <h2 class="heading-2 mb-md">Vaše prostory pronajaté bez starostí</h2>
+                <p class="services-developers__paragraph">Pomáháme řešit komplexní služby s pronájmy obchodních center. Najdeme vám nájemce, pro které budou vaše místa ideální obchodní příležitostí a přinesou vám stabilní a odpovídající příjmy.</p>
+                <a href="#cta" class="btn btn--cta scroll-to">Domluvit schůzku</a>
+            </div>
+        </section>
+
+        <section class="services-tenants" id="services-tenants">
+            <div class="services-tenants__content">
+                <h3 class="heading-3 mb-sm">Služby pro nájemce</h3>
+                <h2 class="heading-2 mb-md">Rozšířte Vaše podnikáni s námi</h2>
+                <p class="services-tenants__paragraph">Hledáte místo, kde budete blíže lidem? Máme kontakty na majitele 
+                    skvělých míst v Praze i po celé České republice. Řekněte nám vaše představy 
+                    i potřeby a my najdeme místa, kde budete vidět.</p>
+                <a href="#cta" class="btn btn--cta scroll-to">Domluvit schůzku</a>
+            </div>
+
+            <div class="services-tenants--right">
+                <div class="card">
+                    <svg class="card__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M352 144h112v112"/><path d="M48 368l121.37-121.37a32 32 0 0145.26 0l50.74 50.74a32 32 0 0045.26 0L448 160" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg>
+                    <h3 class="card__heading">Expanze na trhu</h3>
+                    <p class="card__paragraph">
+                        Váš plán na rozšíření podnikání pečlivě vyhodnotíme a připravíme plán pro 
+                        optimální nárust poboček na těch nejlepších místech na trhu.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <svg class="card__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><title>Refresh</title><path d="M320 146s24.36-12-64-12a160 160 0 10160 160" fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M256 58l80 80-80 80"/></svg>
+                    <h3 class="card__heading">Renegociace</h3>
+                    <p class="card__paragraph">
+                        Při expiraci nájemní smlouvy zajistíme projednání nájemních vztahů, 
+                        analýzu nájmu s přihlédnutím na aktuální tržní situaci. Naším cílem je prodlužovat 
+                        nájemní smlouvy za výhodných podmínek pro obě strany.
                     </p>
                 </div>
             </div>
         </section>
 
-        <section class="about" id="about">
-            <div class="about__picture" role="img" aria-label="Osobní schůzka s vašim retail partnerem, smluvní poradenství"></div>
-            <div class="about__content">
-                <h3 class="heading-3 mb-sm">Základním motivem je</h3>
-                <h2 class="heading-2 italic mb-md">&ldquo;Clara pacta boni amici&rdquo;</h2>
-                <p class="about__paragraph">Jasné smlouvy dělají dobré přátelé. Naše krédo a přístup k byznysu. Ctíme kvalitní nájemní vztahy, které vedou k úspěšnému byznysu. Rádi s Vámi promluvíme o nastavění spolupráce, naším cílem jsou spokojené smluvní strany.</p>
-                <a href="#cta" class="btn btn--cta scroll-to">Domluvit schůzku</a>
-            </div>
-        </section>
-
         <section class="features" id="features">
-            <h2 class="heading-2 mb-lg">Vše ohledně vašich nájmů...</h2>
-            <div class="features__container">                
-                <div class="feature">
-                    <!-- <img src="img/feature-1.jpg" alt="Podpisování uzavřené smlouvy" class="feature__img"> -->
-                    <div class="feature__img feature__img-1" role="img" aria-label="Podpisování uzavřené smlouvy">
-                        <div class="feature__img-overlay">
-                            <h5 class="feature__heading">Nájemní vztahy</h5>
-                            <div class="feature__bounce-wrapper">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Chevron Down</title><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M112 184l144 144 144-144"/></svg>
+            <div class="features-wrapper">
+                <h2 class="heading-2 mb-lg text-center">Víc o vašich nájmech</h2>
+                <div class="features__container">                
+                    <div class="feature">
+                        <!-- <img src="img/feature-1.jpg" alt="Podpisování uzavřené smlouvy" class="feature__img"> -->
+                        <div class="feature__img feature__img-1" role="img" aria-label="Podpisování uzavřené smlouvy">
+                            <div class="feature__img-overlay">
+                                <h5 class="feature__heading">Nájemní vztahy</h5>
+                                <div class="feature__bounce-wrapper">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Chevron Down</title><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M112 184l144 144 144-144"/></svg>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="feature__text-container">
-                        <h3 class="heading-3 mb-esm">Nájemní vztahy</h3>
-                        <ul class="feature__list">
-                            <li class="list-item">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Chevron Forward</title><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M184 112l144 144-144 144"/></svg>
-                                <p>Vyhodncení smluv a návrh na vylepšení dle nejaktuálnějších trendů na retailovém trhu</p>
-                            </li>
-                            <li class="list-item">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Chevron Forward</title><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M184 112l144 144-144 144"/></svg>
-                                <p>Nezávislé posouzení aktivních nájemních vztahů</p>
-                            </li>
-                            <li class="list-item">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Chevron Forward</title><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M184 112l144 144-144 144"/></svg>
-                                <p>Prodloužení, relokace nebo zajištění alternativ</p>
-                            </li>
-                            <li class="list-item">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Chevron Forward</title><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M184 112l144 144-144 144"/></svg>
-                                <p>Renegociace podmínek nájemních smluv</p>
-                            </li>
-                            <li class="list-item">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Chevron Forward</title><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M184 112l144 144-144 144"/></svg>
-                                <p>Monitorování plnění závázků a povinností obou smluvních stran</p>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="feature">
-                    <!-- <img src="img/feature-2.jpg" alt="Nájemní jednotka volná k pronájmu" class="feature__img"> -->
-                    <div class="feature__img feature__img-2" role="img" aria-label="Nájemní jednotka volná k pronájmu">
-                        <div class="feature__img-overlay">
-                            <h5 class="feature__heading">Váš nájemce</h5>
-                            <div class="feature__bounce-wrapper">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Chevron Down</title><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M112 184l144 144 144-144"/></svg>
-                            </div>
+                        <div class="feature__text-container">
+                            <h3 class="heading-3 mb-esm">Nájemní vztahy</h3>
+                            <ul class="feature__list">
+                                <li class="list-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Chevron Forward</title><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M184 112l144 144-144 144"/></svg>
+                                    <p>Vyhodncení smluv a návrh na vylepšení dle nejaktuálnějších trendů na retailovém trhu</p>
+                                </li>
+                                <li class="list-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Chevron Forward</title><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M184 112l144 144-144 144"/></svg>
+                                    <p>Nezávislé posouzení aktivních nájemních vztahů</p>
+                                </li>
+                                <li class="list-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Chevron Forward</title><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M184 112l144 144-144 144"/></svg>
+                                    <p>Prodloužení, relokace nebo zajištění alternativ</p>
+                                </li>
+                                <li class="list-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Chevron Forward</title><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M184 112l144 144-144 144"/></svg>
+                                    <p>Renegociace podmínek nájemních smluv</p>
+                                </li>
+                            </ul>
                         </div>
                     </div>
-                    <div class="feature__text-container">
-                        <h3 class="heading-3 mb-esm">Váš nájemce</h3>
-                        <ul class="feature__list">
-                            <li class="list-item">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Chevron Forward</title><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M184 112l144 144-144 144"/></svg>
-                                <p>Nalezení vhodného nájemce do obchodní jednotky</p>
-                            </li>
-                            <li class="list-item">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Chevron Forward</title><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M184 112l144 144-144 144"/></svg>
-                                <p>Navrhování vhodných smluvních úprav</p>
-                            </li>
-                            <li class="list-item">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Chevron Forward</title><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M184 112l144 144-144 144"/></svg>
-                                <p>Vyjednání podmínek až k podpisu nájemní smlouvy</p>
-                            </li>
-                            <li class="list-item">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Chevron Forward</title><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M184 112l144 144-144 144"/></svg>
-                                <p>Poradenství při retailovém (re-)developmentu pro vhodné využití prostor</p>
-                            </li>
-                            <!-- <li class="list-item">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Chevron Forward</title><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M184 112l144 144-144 144"/></svg>
-                                <p>Změna předmětu nájmu, rozšíření, popřípadě ukončení a naleznutí náhrady</p>
-                            </li> -->
-                        </ul>
-                    </div>
-                </div>
-                <div class="feature">
-                    <!-- <img src="img/feature-3.jpg" alt="Volné obchodní jednotky v nákupném centru" class="feature__img"> -->
-                    <div class="feature__img feature__img-3" role="img" aria-label="Volné obchodní jednotky v nákupném centru">
-                        <div class="feature__img-overlay">
-                            <h5 class="feature__heading">Vaše expanze</h5>
-                            <div class="feature__bounce-wrapper">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Chevron Down</title><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M112 184l144 144 144-144"/></svg>
+                    <div class="feature">
+                        <!-- <img src="img/feature-2.jpg" alt="Nájemní jednotka volná k pronájmu" class="feature__img"> -->
+                        <div class="feature__img feature__img-2" role="img" aria-label="Nájemní jednotka volná k pronájmu">
+                            <div class="feature__img-overlay">
+                                <h5 class="feature__heading">Váš nájemce</h5>
+                                <div class="feature__bounce-wrapper">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Chevron Down</title><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M112 184l144 144 144-144"/></svg>
+                                </div>
                             </div>
                         </div>
+                        <div class="feature__text-container">
+                            <h3 class="heading-3 mb-esm">Váš nájemce</h3>
+                            <ul class="feature__list">
+                                <li class="list-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Chevron Forward</title><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M184 112l144 144-144 144"/></svg>
+                                    <p>Nalezení vhodného nájemce do obchodní jednotky</p>
+                                </li>
+                                <li class="list-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Chevron Forward</title><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M184 112l144 144-144 144"/></svg>
+                                    <p>Navrhování vhodných smluvních úprav</p>
+                                </li>
+                                <li class="list-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Chevron Forward</title><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M184 112l144 144-144 144"/></svg>
+                                    <p>Vyjednání podmínek až k podpisu nájemní smlouvy</p>
+                                </li>
+                                <li class="list-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Chevron Forward</title><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M184 112l144 144-144 144"/></svg>
+                                    <p>Poradenství při retailovém (re-)developmentu pro vhodné využití prostor</p>
+                                </li>
+                                <!-- <li class="list-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Chevron Forward</title><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M184 112l144 144-144 144"/></svg>
+                                    <p>Změna předmětu nájmu, rozšíření, popřípadě ukončení a naleznutí náhrady</p>
+                                </li> -->
+                            </ul>
+                        </div>
                     </div>
-                    <div class="feature__text-container">
-                        <h3 class="heading-3 mb-esm">Vaše expanze</h3>
-                        <ul class="feature__list">
-                            <li class="list-item">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Chevron Forward</title><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M184 112l144 144-144 144"/></svg>
-                                <p>Vyhodnocení potřebných faktorů pro expanzi včetně potenciálu trhu</p>
-                            </li>
-                            <li class="list-item">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Chevron Forward</title><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M184 112l144 144-144 144"/></svg>
-                                <p>Analýza konkurence a vytipování maloobchodních prostor</p>
-                            </li>
-                            <li class="list-item">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Chevron Forward</title><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M184 112l144 144-144 144"/></svg>
-                                <p>Kontaktování pronajímatele</p>
-                            </li>
-                            <li class="list-item">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Chevron Forward</title><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M184 112l144 144-144 144"/></svg>
-                                <p>Domluvení obchodních podmínek</p>
-                            </li>
-                            <li class="list-item">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Chevron Forward</title><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M184 112l144 144-144 144"/></svg>
-                                <p>Vyjednání nájemní smlouvy až k podpisu</p>
-                            </li>
-                        </ul>
+                    <div class="feature">
+                        <!-- <img src="img/feature-3.jpg" alt="Volné obchodní jednotky v nákupném centru" class="feature__img"> -->
+                        <div class="feature__img feature__img-3" role="img" aria-label="Volné obchodní jednotky v nákupném centru">
+                            <div class="feature__img-overlay">
+                                <h5 class="feature__heading">Vaše expanze</h5>
+                                <div class="feature__bounce-wrapper">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Chevron Down</title><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M112 184l144 144 144-144"/></svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="feature__text-container">
+                            <h3 class="heading-3 mb-esm">Vaše expanze</h3>
+                            <ul class="feature__list">
+                                <li class="list-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Chevron Forward</title><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M184 112l144 144-144 144"/></svg>
+                                    <p>Vyhodnocení potřebných faktorů pro expanzi včetně potenciálu trhu</p>
+                                </li>
+                                <li class="list-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Chevron Forward</title><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M184 112l144 144-144 144"/></svg>
+                                    <p>Analýza konkurence a vytipování maloobchodních prostor</p>
+                                </li>
+                                <li class="list-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Chevron Forward</title><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M184 112l144 144-144 144"/></svg>
+                                    <p>Kontaktování pronajímatele</p>
+                                </li>
+                                <li class="list-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Chevron Forward</title><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M184 112l144 144-144 144"/></svg>
+                                    <p>Domluvení obchodních podmínek</p>
+                                </li>
+                                <li class="list-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Chevron Forward</title><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M184 112l144 144-144 144"/></svg>
+                                    <p>Vyjednání nájemní smlouvy až k podpisu</p>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
