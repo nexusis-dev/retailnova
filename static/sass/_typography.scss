@@ -31,6 +31,10 @@
     color: $color-primary;
     font-family: $font-heading;
     word-spacing: 2px;
+
+    @media only screen and (max-width: $bp-small) {
+        font-size: 2rem;
+    }
 }
 
 .heading-2 {
@@ -38,6 +42,10 @@
     line-height: 1;
     font-weight: 300;
     color: $color-grey-dark-1;
+
+    @media only screen and (max-width: $bp-small) {
+        font-size: 5rem;
+    }
 }
 
 .heading-break {

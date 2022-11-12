@@ -27,7 +27,7 @@ allLinks.forEach(function(link) {
     link.addEventListener('click', function(e) {
         e.preventDefault();
         const href = link.getAttribute('href');
-        
+
         // Scroll back to top if clicked href='#'
         if (href === '#') {
             window.scrollTo({
@@ -50,6 +50,16 @@ allLinks.forEach(function(link) {
         mobNav.classList.remove('nav-open');
     });
 });
+
+// PREVENT JUMPING AFTER CLICKING ON EMPTY LINKS
+const emptyLinks = document.querySelectorAll('.empty__link');
+
+emptyLinks.forEach(function(emptyLink) {
+    emptyLink.addEventListener('click', function(e) {
+        e.preventDefault();
+    });
+});
+
 
 // CONTACT FORM SEND
 const form = document.querySelector('.contact__form');
@@ -200,7 +210,7 @@ function revealSection(entries, observer) {
 
 const optiSec = {
     root: null,
-    threshold: 0.15,
+    threshold: 0.1,
     rootMargin: '0px 0px 0px 0px'
 };
 

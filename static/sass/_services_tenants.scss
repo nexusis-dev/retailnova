@@ -2,7 +2,6 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     background-color: $color-grey-light-1;
-    // border-bottom: 1px solid rgba($color-secondary, 0.95);
 
     @media only screen and (max-width: 53.125em) {
         grid-template-columns: 1fr;
@@ -30,6 +29,7 @@
             grid-template-columns: 1fr;
             grid-template-rows: repeat(2, min-content);
             justify-items: center;
+            padding: 9.6rem 3.2rem;
         }
     }
 
@@ -52,7 +52,7 @@
     }
 
     &__paragraph {
-        font-size: 1.6rem;
+        font-size: $paragraph-font-size;
         font-style: italic;
         text-align: justify;
         text-align-last: left;
@@ -60,6 +60,10 @@
 
         @media only screen and (max-width: 53.125em) {
             text-align: left;
+        }
+
+        @media only screen and (max-width: $bp-small) {
+            font-size: 2rem;
         }
     }
 }

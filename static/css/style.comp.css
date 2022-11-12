@@ -30,10 +30,12 @@ body {
 section {
   opacity: 1;
   transform: translateY(0);
-  transition: all 1s; }
+  transition: all 0.7s;
+  scroll-margin-top: 7rem; }
   section.section--hidden {
     opacity: 0;
-    transform: translateY(8rem); }
+    transform: translateY(8rem);
+    scroll-margin-top: 15rem; }
 
 ::selection {
   background-color: #c69963;
@@ -67,12 +69,18 @@ section {
   color: #c69963;
   font-family: "Montserrat", sans-serif;
   word-spacing: 2px; }
+  @media only screen and (max-width: 37.5em) {
+    .heading-3 {
+      font-size: 2rem; } }
 
 .heading-2 {
   font-size: 4rem;
   line-height: 1;
   font-weight: 300;
   color: #54483A; }
+  @media only screen and (max-width: 37.5em) {
+    .heading-2 {
+      font-size: 5rem; } }
 
 @media only screen and (max-width: 79.0652em) {
   .heading-break {
@@ -117,7 +125,7 @@ section {
   letter-spacing: 1.5px; }
   @media only screen and (max-width: 37.5em) {
     .btn {
-      font-size: 1.4rem;
+      font-size: 1.5rem;
       padding: 1.6rem 2.8rem; } }
   .btn:link, .btn:visited {
     background-color: #c69963;
@@ -397,7 +405,7 @@ section {
       .intro__content {
         padding: 9rem 3.2rem; } }
   .intro__paragraph {
-    font-size: 1.6rem;
+    font-size: 1.7rem;
     font-style: italic;
     margin-bottom: 4rem;
     text-align: justify;
@@ -405,6 +413,9 @@ section {
     @media only screen and (max-width: 53.125em) {
       .intro__paragraph {
         text-align-last: left; } }
+    @media only screen and (max-width: 37.5em) {
+      .intro__paragraph {
+        font-size: 2rem; } }
 
 .services-developers {
   display: grid;
@@ -433,7 +444,8 @@ section {
       .services-developers--left {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(4, min-content);
-        justify-items: center; } }
+        justify-items: center;
+        padding: 9.6rem 3.2rem; } }
   .services-developers__content {
     padding: 12rem 8rem;
     display: flex;
@@ -448,12 +460,15 @@ section {
       .services-developers__content {
         padding: 9rem 3.2rem; } }
   .services-developers__paragraph {
-    font-size: 1.6rem;
+    font-size: 1.7rem;
     font-style: italic;
     margin-bottom: 4rem; }
     @media only screen and (max-width: 53.125em) {
       .services-developers__paragraph {
         text-align: left; } }
+    @media only screen and (max-width: 37.5em) {
+      .services-developers__paragraph {
+        font-size: 2rem; } }
 
 .services-tenants {
   display: grid;
@@ -481,7 +496,8 @@ section {
       .services-tenants--right {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(2, min-content);
-        justify-items: center; } }
+        justify-items: center;
+        padding: 9.6rem 3.2rem; } }
   .services-tenants__content {
     padding: 12rem 8rem;
     display: flex;
@@ -497,7 +513,7 @@ section {
       .services-tenants__content {
         padding: 9rem 3.2rem; } }
   .services-tenants__paragraph {
-    font-size: 1.6rem;
+    font-size: 1.7rem;
     font-style: italic;
     text-align: justify;
     text-align-last: left;
@@ -505,6 +521,9 @@ section {
     @media only screen and (max-width: 53.125em) {
       .services-tenants__paragraph {
         text-align: left; } }
+    @media only screen and (max-width: 37.5em) {
+      .services-tenants__paragraph {
+        font-size: 2rem; } }
 
 .features {
   background-color: #f9f5ef; }
@@ -548,6 +567,9 @@ section {
       .feature:last-child {
         grid-column: 1;
         justify-self: unset; } }
+  @media only screen and (max-width: 37.5em) {
+    .feature {
+      height: auto; } }
   @media only screen and (max-width: 28.75em) {
     .feature {
       width: 100%; } }
@@ -602,6 +624,9 @@ section {
     @media only screen and (max-width: 75em) {
       .feature__text-container {
         height: 25rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .feature__text-container {
+        height: auto; } }
   .feature__heading {
     font-size: 1.8rem;
     text-transform: uppercase;
@@ -623,6 +648,9 @@ section {
       .feature__list .list-item p {
         font-size: 1.4rem;
         line-height: 1.4; }
+        @media only screen and (max-width: 37.5em) {
+          .feature__list .list-item p {
+            font-size: 1.5rem; } }
       .feature__list .list-item:not(:last-child) {
         margin-bottom: 0.6rem; }
   .feature:hover .feature__img-overlay {
@@ -799,7 +827,7 @@ section {
       padding: 0rem; } }
   @media only screen and (max-width: 37.5em) {
     .card {
-      width: 25rem; } }
+      width: 100%; } }
   @media (any-hover: hover) {
     .card:hover {
       transform: scale(1.02) translateY(-1.5rem); } }
@@ -818,8 +846,14 @@ section {
     font-weight: 700;
     color: #B28451;
     align-self: center; }
+    @media only screen and (max-width: 37.5em) {
+      .card__heading {
+        font-size: 2rem; } }
   .card__paragraph {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     text-align: justify;
     grid-column: 1 / -1;
     color: #b7bbc0; }
+    @media only screen and (max-width: 37.5em) {
+      .card__paragraph {
+        font-size: 2rem; } }
