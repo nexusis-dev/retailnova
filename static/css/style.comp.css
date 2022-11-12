@@ -650,7 +650,7 @@ section {
         line-height: 1.4; }
         @media only screen and (max-width: 37.5em) {
           .feature__list .list-item p {
-            font-size: 1.5rem; } }
+            font-size: 1.8rem; } }
       .feature__list .list-item:not(:last-child) {
         margin-bottom: 0.6rem; }
   .feature:hover .feature__img-overlay {
